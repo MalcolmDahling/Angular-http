@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IMovie } from './models/IMovie';
 import { DataService } from './services/data.service';
 
 @Component({
@@ -9,9 +10,12 @@ import { DataService } from './services/data.service';
 export class AppComponent {
     title = 'Angular-http';
 
-    constructor(private service:DataService){}
+    constructor(){}
 
+   
+    
     ngOnInit(){
-        console.log( this.service.getData() );
+           
     }
 }
+ 
