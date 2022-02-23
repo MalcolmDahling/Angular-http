@@ -1,6 +1,6 @@
 import { IMovie } from "./IMovie";
 
-export interface IOmdbResponse {
+export interface IOmdbResponse{
     Search:IMovie[];
     totalResult:string;
 }

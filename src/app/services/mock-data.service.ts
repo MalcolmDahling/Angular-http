@@ -4,11 +4,13 @@ import { IDataService } from '../models/IDataService';
 import { IMovie } from '../models/IMovie';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
-export class MockDataService implements IDataService{
+export class MockDataService implements IDataService {
 
-  constructor() {}
-    getData() {}
-    theData = new Subject<IMovie[]>();
+    constructor() { }
+
+    movies = new Subject<IMovie[]>();
+
+    getData(){}
 }

@@ -10,12 +10,19 @@ import { DataService } from './services/data.service';
 export class AppComponent {
     title = 'Angular-http';
 
-    constructor(){}
+    constructor(private service:DataService){}
 
    
+    movies:IMovie[] = [];
     
     ngOnInit(){
-           
+        this.service.getData();
+        this.service.movies$.subscribe(val => {
+            this.movies = val;
+            console.log(this.movies);
+        });
+
+        
     }
 }
- 
+

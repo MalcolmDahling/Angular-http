@@ -1,7 +1,7 @@
 import { Subject } from "rxjs";
 import { IMovie } from "./IMovie";
 
-export interface IDataService{
+export interface IDataService {
     getData():any;
-    theData:Subject<IMovie[]>;
+    movies:Subject<IMovie[]>;
 }
